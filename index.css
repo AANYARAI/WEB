@@ -1,13 +1,15 @@
-/* h3{
+h3{
     color: blue;
-} */
-/* .one{
-    hello
-} */
+} 
+.one{
+    /* background-color: black; */
+    color: coral;
+}
 
-/* #one{
-    background-color: plum;/
-} */
+#one{
+    /* background-color: plum; */
+    color: aqua;
+}
 /* a[href='http://google.com']{
     background-color: chartreuse;
     color: cornsilk;
@@ -16,10 +18,11 @@
     background-color: chartreuse;
     color: cornsilk;
 } */
-/* a[href$='in']{
+a[href$='in']{
     background-color: chartreuse;
     color: cornsilk;
-} */
-*{
-    background-color: blueviolet;
 }
+/* *{
+    background-color: blueviolet;
+    color: beige;
+} */
