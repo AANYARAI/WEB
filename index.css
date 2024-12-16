@@ -1,6 +1,6 @@
-h3{
+/* h3{
     color: blue;
-} 
+}  */
 .one{
     /* background-color: black; */
     color: coral;
@@ -22,7 +22,7 @@ a[href$='in']{
     background-color: chartreuse;
     color: cornsilk;
 }
-/* *{
+*{
     background-color: blueviolet;
     color: beige;
-} */
+}

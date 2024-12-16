@@ -1,0 +1,19 @@
+div p{
+    color: plum;
+}
+
+li:nth-of-type(1){
+    color: aquamarine;
+}
+
+div{
+    background-color: blanchedalmond;
+    height: 100px;
+    width: 100px;
+}
+
+div:hover{
+background-color: blue;
+border-radius: 50%;
+transition: 3s;
+}
