@@ -1,0 +1,33 @@
+/* #parent{
+    background-color: black;
+    height: 500px;
+    width: 300px;
+}
+#child{
+    background-color: cornflowerblue;
+    height: 25%;
+    width: 40%;
+} */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* li{
+    font-size: 2em;
+} */
+div{
+    background-color: plum;
+    height: 100px;
+    width: 100px;
+    display: block;
+    /* display: none; */
+    /* visibility: hidden; */
+}
+span{
+    background-color: hotpink;
+    height: 100px;
+    width: 100px;
+    display: block; 
+    display: inline-block;
+}

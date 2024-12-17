@@ -1,0 +1,12 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div{
+    border: 2px solid blueviolet;
+    height: 100px;
+    width: 100px;
+    padding: 30px;
+    margin: 20px;
+}
