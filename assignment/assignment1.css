@@ -1,0 +1,28 @@
+#main{
+    /* border: 3px solid; */
+    /* height: 600px; */
+    /* width: 600px; */
+    background-color: rgb(17, 10, 10);
+    color:orangered;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#main div{
+    /* color: rgb(211, 94, 27); */
+}
+#two{
+    justify-content: space-between;
+    flex-direction: row;
+    width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    color: whitesmoke;
+    /* justify-content: center; */
+}
+#three button{
+justify-content: space-evenly;
+color: whitesmoke;
+background-color: orangered;
+justify-content: end;
+}

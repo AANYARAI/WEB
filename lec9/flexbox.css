@@ -1,0 +1,31 @@
+#main{
+    height: 600px;
+    /* width: 150px; */
+    display: flex;
+    border: 2px solid;
+    /* flex-direction: column; */
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+    /* justify-content: baseline; */
+    /* justify-content: center; */
+    /* justify-content: end; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+}
+#one {
+    height: 150px;
+    width: 150px;
+    background-color: rgba(168, 202, 147, 0.577);
+}
+#two{
+    height: 150px;
+    width: 150px;
+    background-color: rgb(45, 168, 190);
+}
+#three{
+    height: 150px;
+    width: 150px;
+    background-color: rgb(228, 101, 179);
+}

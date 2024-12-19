@@ -4,7 +4,8 @@ body{
     align-items: center;
 }
 div{
-    border: 2px solid blueviolet;
+    background-color: grey;
+    border: 2px solid rgb(12, 9, 16);
     height: 100px;
     width: 100px;
     padding: 30px;
