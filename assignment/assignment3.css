@@ -1,0 +1,33 @@
+#main{
+    width: 500px;
+    height: 300px;
+    position: relative;
+    transition: 3s;
+    margin: 50px  auto;
+    transform-style: preserve-3d;
+}
+#main:hover{
+    transform: rotateY(180deg);
+}
+img{
+    width: 100%;
+}
+body{
+    perspective: 900px;
+}
+#two{
+    /* background-color: cornflowerblue; */
+    /* z-index: 2; */
+    transform: rotateY(180deg);
+}
+#one{
+   
+    z-index: 1;
+    backface-visibility: hidden;
+}
+#one, #two{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: chocolate;
+}
