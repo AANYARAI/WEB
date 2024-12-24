@@ -1,0 +1,27 @@
+div{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 5px solid;
+   /* background-color: blue;
+   background-color: blueviolet; */
+   background:linear-gradient(purple ,plum,blue);
+    animation-name: yeshu;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    margin: 100px auto;
+    animation-timing-function: ease-in;
+
+}
+@keyframes yeshu{
+0%{
+    transform:  translateY(0vh);
+}
+/* 50%{
+    transform:  translateY(30vh) rotateY(360deg);
+} */
+100%{
+    transform: translateY(70vh) rotate(360deg);
+}
+}
