@@ -1,0 +1,93 @@
+
+#one {
+    height: 150px;
+    margin: auto;
+
+    width: 150px;
+    border-radius: 50%;
+    background:linear-gradient(blue ,red);
+    border: 10px solid;
+    transform-style: preserve-3d;
+    /* margin: auto; */
+    animation-name: ball1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+@keyframes ball1 {
+    0%{
+        transform: translate(0px, 0px)
+      
+
+    }
+
+    100%{
+       transform: translate(250px ,250px);
+    }
+    
+}
+#two{
+    display: flex;
+    justify-content: center;
+
+}
+#two {
+    height: 150px;
+    margin: auto;
+
+    width: 150px;
+    border-radius: 50%;
+    background:linear-gradient(blue ,red);
+    border: 10px solid;
+    transform-style: preserve-3d;
+    /* margin: auto; */
+    animation-name: ball2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+    position: absolute;
+    left: 75vw;
+    top: -50px;
+}
+@keyframes ball2 {
+    0%{
+        transform: translate(0px, 0px)
+      
+
+    }
+
+    100%{
+       transform: translate(-250px ,250px);
+    }
+    
+}
+#three{
+    height: 150px;
+    margin: auto;
+
+    width: 150px;
+    border-radius: 50%;
+    background:linear-gradient(blue ,red);
+    border: 10px solid;
+    transform-style: preserve-3d;
+    /* margin: auto; */
+    animation-name: ball3;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+    position: absolute;
+}
+@keyframes ball3 {
+    0%{
+        transform: translate(-50px, -300px)
+      
+
+    }
+
+    100%{
+       transform: translate(250px ,250px);
+    }    
+}
