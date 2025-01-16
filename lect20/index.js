@@ -24,17 +24,17 @@ sum()
 console.log(typeof(sum));
 console.log(typeof(null));
 'hello'+1
- let a=5
+ let z =5
 Object
  Array
  function
  let arr=[1,2,3,4,56,'false']
  console.log([]==[]);// =>   false 
- let arr=[]
- let arr1=arr
+ let arr1=[]
+ let arr2=arr1
  console.log(arr1==arr);
- let arr=[1,2,3,4]
- let arr1=arr 
+ let arr3=[1,2,3,4]
+ let arr4=arr3 
  arr1.push(5) 
  console.log(arr,'arr'); //[1,2,3,4]|| [1,2,3,4,5]
  console.log(arr1,'arr1');//[1,2,3,4,5] ||[0,1,2,3,4]
@@ -55,7 +55,7 @@ let a={id:1}
  a=null
 console.log(typeof(a));
 
- let arr=[1,2,3,4,5,5,6]
+ let arr5=[1,2,3,4,5,5,6]
  loop
  0
  for(let i in arr){
@@ -67,7 +67,7 @@ console.log(typeof(a));
     
  }
 
-  let data=  arr.forEach((a,b,c)=>{
+  let data1=  arr.forEach((a,b,c)=>{
      console.log(a*2);
       return a
     
@@ -93,7 +93,7 @@ console.log(typeof(a));
 
 let arr=[1,2,3,4,54,56,68,5,5]
 
-  let data=  arr.find((a,b,c)=>{
+  let data2=  arr.find((a,b,c)=>{
     return a==5
     
 
@@ -101,7 +101,7 @@ let arr=[1,2,3,4,54,56,68,5,5]
  })
 console.log(data);
 
- let data1=  arr.filter((a,b,c)=>{
+ let data3=  arr.filter((a,b,c)=>{
     return a==5
     
 
