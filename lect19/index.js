@@ -36,4 +36,12 @@ for (let i of arrr){
 }
 console.log(arr);
 
-console.log(arr[4]);
+console.log(arr[4]);// function callBack(a){
+//     console.log('hello');
+//     setTimeout(()=>{
+//         a()
+//     },2000)
+// }
+callBack(function outer() {
+});
+
