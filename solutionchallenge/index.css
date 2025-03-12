@@ -1,0 +1,87 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Snell Roundhand, cursive;
+    background-color: #EFE1E1;
+    color: #0e0d0d;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #E0C1C6;
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+.navbar-list a {
+    color: rgb(223, 85, 131);
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar-list a:hover {
+    text-decoration: underline;
+    color: whitesmoke;
+}
+
+/* Login Button Styling */
+.login-btn {
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 26px;
+    border-radius: 5px;
+}
+
+.login-btn:hover {
+    background-color: #e55347;
+}
+#one{
+    display: flex;
+    position:relative;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 50%;
+}
+#two{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    top: 70%;
+}
+#three{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    right: 5px;
+    top: 20%;
+    border-radius: 70%;
+}
