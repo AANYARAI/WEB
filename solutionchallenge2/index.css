@@ -1,0 +1,246 @@
+.icon {
+    width: 70px;
+    height: auto;  
+  margin-left: 10px;
+  border-radius: 1px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hind', sans-serif;
+    line-height: 1.6;
+    background-color: #d4857e;
+    color: #d4857e;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E0C1C6;
+    padding: 15px;
+}
+
+.navbar .logo {
+    color: rgb(13, 11, 11);
+    font-size: 40px;
+    font-weight: bold;
+     margin-right: 800px;
+    font-family: Snell Roundhand, cursive;
+    }
+
+.navbar .logo i {
+    margin-right: 1400px;
+}
+.login-btn {
+    background-color: #130d0c;
+    border: 2px solid;
+    color: rgb(239, 235, 235);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+.login-btn:hover {
+    background-color: #d4857e;
+}
+.login-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.login-form, .signup-form {
+    background-color: rgb(238, 210, 210);
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+}
+.login-form input, .signup-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #d4857e;
+    border-radius: 5px;
+}
+.login-form button, .signup-form button {
+    padding: 10px 20px;
+    background-color:#d4857e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.login-form button:hover, .signup-form button:hover {
+    background-color: #d4959f;
+}
+.close-btn {
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+/* Hero Section */
+.hero {
+    position:relative;
+    
+    background-size: cover;
+    background-position: left;
+    height: 600px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    top: 300px;
+}
+.quote-overlay {
+    position: absolute;
+    top: 40px;
+    left: 100%;
+   
+    text-align: left;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-links li {
+    margin-left: 20px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 13px;
+}
+
+.navbar-links a:hover {
+    background-color: #555;
+    border-radius: 6px;
+}
+
+.auth-links a {
+    color: white;
+    text-decoration:salmon;
+    font-size: 18px;
+}
+
+
+.quote-overlay {
+    position: absolute;
+    top:40%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 36px;
+    font-style: italic;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.one{
+    top: 90px;
+}
+/* Feature Section */
+.feature-section {
+    padding: 40px;
+    text-align: center;
+    background-color: #f1eded;
+    margin: 80px auto;
+    max-width: 700px;
+    border-radius: 10px;
+}
+
+.feature-section h2 {
+    font-size: 28px;
+    margin-top: 40px;
+}
+
+.feature-section p {
+    font-size: 20px;
+}
+.sos-btn {
+    text-decoration: none;
+    background-color: rgb(8, 7, 7);
+    color: white;
+    padding: 2px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sos-btn:hover {
+    background-color:  #d4959f;
+}
+.reminder-btn, .diet-btn, .ai-btn, .resources-btn {
+    background-color: rgb(8, 7, 7);
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sos-btn:hover, .reminder-btn:hover, .diet-btn:hover, .ai-btn:hover, .resources-btn:hover {
+    background-color: #d4959f;
+}
+
+/* Social Media Icons */
+footer {
+    text-align: start;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 50px;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: #f8b400;
+}
+@media screen and (max-width: 768px) {
+    .hero-img {
+        width: 100%;
+        height: auto;
+    }
+    .quote-overlay {
+        font-size: 24px;
+    }
+}
+footer p {
+    background-color: #333;
+    color: white;
+    width: 100%;
+    bottom: 0;
+    padding: 10px;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    font-size: 1em;
+} 
