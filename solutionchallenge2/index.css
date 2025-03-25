@@ -13,7 +13,7 @@
 body {
     font-family: 'Hind', sans-serif;
     line-height: 1.6;
-    background-color: #d4857e;
+    background-color: #e0c8c4;
     color: #d4857e;
 }
 
@@ -22,7 +22,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #E0C1C6;
+    background-color: #d4857e;
     padding: 15px;
 }
 
@@ -84,7 +84,7 @@ body {
     border-radius: 5px;
 }
 .login-form button:hover, .signup-form button:hover {
-    background-color: #d4959f;
+    background-color: #d4857e;
 }
 .close-btn {
     padding: 5px 10px;
@@ -127,25 +127,27 @@ body {
 }
 
 .navbar-links li {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .navbar-links a {
-    color: white;
+    color: rgb(48, 45, 45);
     text-decoration: none;
     font-size: 20px;
-    padding: 13px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
 }
 
 .navbar-links a:hover {
-    background-color: #555;
+    background-color: #eee9e9;
     border-radius: 6px;
 }
 
 .auth-links a {
     color: white;
     text-decoration:salmon;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 
@@ -181,7 +183,7 @@ body {
 .feature-section p {
     font-size: 20px;
 }
-.sos-btn {
+.sos-btn,.reminder-btn, .diet-btn,.period-btn, .ai-btn, .resources-btn {
     text-decoration: none;
     background-color: rgb(8, 7, 7);
     color: white;
@@ -192,26 +194,13 @@ body {
     cursor: pointer;
 }
 
-.sos-btn:hover {
-    background-color:  #d4959f;
-}
-.reminder-btn, .diet-btn, .ai-btn, .resources-btn {
-    background-color: rgb(8, 7, 7);
-    color: white;
-    padding: 10px 20px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.sos-btn:hover, .reminder-btn:hover, .diet-btn:hover, .ai-btn:hover, .resources-btn:hover {
-    background-color: #d4959f;
+.sos-btn:hover,.reminder-btn:hover, .diet-btn:hover,.period-btn:hover ,.ai-btn:hover, .resources-btn:hover {
+    background-color: #d4857e;
 }
 
 /* Social Media Icons */
 footer {
-    text-align: start;
+    text-align: center;
     margin-top: 10px;
 }
 
@@ -222,7 +211,7 @@ footer {
 }
 
 .social-icons a:hover {
-    color: #f8b400;
+    color: whitesmoke;
 }
 @media screen and (max-width: 768px) {
     .hero-img {

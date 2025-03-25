@@ -22,26 +22,10 @@ function closeSignup() {
 }
 
 // Event listener for login button
-document.querySelector('.login-btn').addEventListener('click', openLogin);// SOS Button Functionality
-// document.getElementById("callSOS").addEventListener("click", function() {
-//     var phoneNumber = document.getElementById("phoneNumber").value;
-//     if (phoneNumber) {
-//         // Check if the device is mobile
-//         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-//         if (isMobile) {
-//             // If mobile, dial the phone number
-//             window.location.href = "tel:" + phoneNumber;
-//         } else {
-//             // If not mobile, redirect to another page
-//             window.location.href = "anotherPage.html";  // Replace with actual page
-//         }
-//     } else {
-//         alert("Please enter a phone number.");
-//     }
-// });
+document.querySelector('.login-btn').addEventListener('click', openLogin);
 
 document.getElementById("sosButton").addEventListener("click", function() {
-    
+    var phoneNumber = document.getElementById("phoneNumber").value;
     const emergencyNumber = "+108"; 
     if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
         window.location.href = `tel:${emergencyNumber}`;
@@ -51,4 +35,5 @@ document.getElementById("sosButton").addEventListener("click", function() {
     
     }
 });
+
 

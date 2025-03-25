@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Period Tracker</title>
+    <link rel="stylesheet" href="period.css">
+</head>
+<body>
+    <h1>Period Tracker</h1>
+
+    <form id="period-form">
+        <label for="startDate">Last period start date:</label>
+        <input type="date" id="startDate" required>
+
+        <label for="cycleLength">Average cycle length (days):</label>
+        <input type="number" id="cycleLength" value="28" min="21" max="35" required>
+
+        <button type="submit">Predict Next Period</button>
+    </form>
+
+    <h2 id="prediction"></h2>
+
+    <h3>Upcoming Dates:</h3>
+    <ul id="upcoming-dates"></ul>
+    <script src="period.js"></script>
+</body>
+</html>

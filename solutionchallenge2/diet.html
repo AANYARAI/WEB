@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maternal Diet Chart Planner</title>
+    <link rel="stylesheet" href="diet.css">
+</head>
+<body>
+    <h1>Maternal Diet Chart Planner</h1>
+
+    <form id="diet-form">
+        <label for="trimester">Select Your Trimester:</label>
+        <select id="trimester" required>
+            <option value="first">First Trimester (1-12 weeks)</option>
+            <option value="second">Second Trimester (13-27 weeks)</option>
+            <option value="third">Third Trimester (28-40 weeks)</option>
+        </select>
+
+        <label for="preferences">Diet Preferences:</label>
+        <textarea id="preferences" rows="4" placeholder="Any allergies, vegetarian, etc."></textarea>
+
+        <button type="submit">Generate Diet Plan</button>
+    </form>
+
+    <h2>Your Diet Plan:</h2>
+    <div id="diet-plan"></div>
+
+    <script src="diet.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder - माँ-𝔼𝕋𝔼ℝℕ𝔸𝕃</title>
+    <link rel="stylesheet" href="reminder.css">
+</head>
+<body>
+    <header>
+        <h1>Set a Reminder</h1>
+    </header>
+
+    <section class="reminder-form">
+        <h2>Enter Reminder Details</h2>
+        <form id="reminderForm">
+            <label for="reminderTitle">Reminder Title:</label>
+            <input type="text" id="reminderTitle" required><br><br>
+
+            <label for="reminderDescription">Reminder Description:</label>
+            <textarea id="reminderDescription" rows="4" required></textarea><br><br>
+
+            <label for="reminderDate">Reminder Date:</label>
+            <input type="datetime-local" id="reminderDate" required><br><br>
+
+            <button type="submit">Set Reminder</button>
+        </form>
+    </section>
+
+    <section id="reminderMessage" class="hidden">
+        <p id="reminderText"></p>
+    </section>
+
+
+    <script src="reminder.js"></script>
+</body>
+</html>
