@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let arr=[1,2,3,4,5,6]
+        // console.log(arr.length);
+        // console.log(arr[0]);
+        
+        
+        //2D 
+        // let arr1=[[1,2,3,4,5],[6,7,8,9,0],[1]]
+        // console.log(arr1.length);
+        // console.log(arr1[0][0]);
+
+        // for (let i=0;i<arr1.length;i++){
+        //     for(let j=0;j<arr1[i].length;j++){
+        //         console.log(arr1[i][j]);
+                
+        //     }
+        // }
+        
+        // function sumof2darray (arr){
+             
+        //     let sum = 0;
+        //     for (let i =0;i<arr1.length;i++){
+        //         for (let j=0;j<arr1[i].length;j++){
+        //             sum +=arr[i][j];
+        //         }
+        //     }
+        //     return sum;
+
+        // }
+    //    let arr1 = [[1, 2, 3, 4, 5], [6, 7, 8, 9, 0], [1]];
+        // console.log(sumof2darray(arr1));
+
+
+        // let data=arr1.map((a,b,c)=>a.map((res)=>{return res*2}))
+        // console.log(data.flat());
+
+        
+// function maxelement(arr) {
+//     let max = arr[0][0];
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = 0; j < arr[i].length; j++) {
+//             if (arr[i][j] > max) {
+//                 max = arr[i][j];
+//             }
+//         }
+//     }
+//     return max;
+// }
+
+// let arr1 = [[1, 2, 3, 4, 5], [6, 7, 8, 9, 0], [1]];
+// console.log(maxelement(arr1));
+
+let arr1 = [[1, 2, 3, 4, 5], [6, 7, 8, 9, 0]];
+let totalSum=arr1.reduce((sum,b)=>{
+    return sum+b.reduce((val,res)=>{return val+res},0)
+},0)
+console.log(totalSum);
+
+
+
+    </script>
+</body>
+</html>
