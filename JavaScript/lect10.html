@@ -7,7 +7,28 @@
 </head>
 <body>
     <script>
-        
+    //     fun1()
+    //   var fun1=()=>{
+    //         console.log("hiii");
+            
+    //     }
+// var a = 1;
+// function foo() {
+//   console.log(a);
+//   var a = 2;
+// }
+// foo();
+
+var a=1;
+function outer(){
+    console.log(a);
+    var a=2;
+    function inner(){
+console.log(a);
+    }inner();
+
+    
+}outer();
     </script>
 </body>
 </html>
