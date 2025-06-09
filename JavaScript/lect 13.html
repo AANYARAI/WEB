@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function  outer(){
+            let count = 0;
+            return{
+                getCount:function(){
+                    return count++
+                }
+            }
+        }
+        let data1=outer()
+         let data2=outer()
+
+         console.log(data1.getCount());
+         console.log(data2.getCount());
+         console.log(data1.getCount());
+         console.log(data2.getCount());
+
+         
+
+    </script>
+</body>
+</html>

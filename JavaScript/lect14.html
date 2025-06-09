@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // THIS KEYWORD
+        // console.log(window);  //Global object//
+        // console.log("Aanya");
+        
+        // console.log(this==window);  
+        // let a=5;
+        // let obj={
+        //     name:"palak",
+        //     amount :13000,
+        //     getBalance:()=>{
+        //         console.log(this.a); 
+        //     }
+        // }
+        // obj.getBalance()
+
+
+        // // prototype
+        // let obj={
+        //     id:1,
+        //     name:"Aanya Rao"
+        // }
+        // console.log(obj.__proto__);
+        //  console.log(obj.lastname);
+
+
+        // let arr=[1,2,3]
+        // console.log(arr.name);
+        // arr=>Array.prototype=>Object.prototype=>null
+        // let str="Hello"
+        // str=>String.prototype=>Object.prototype=>null
+        // console.log(str.toLowerCase());
+
+        // let arr =[1,2,3,4]
+        // arr.map(=>{
+
+        // })
+        
+        Array.prototype.myMap=function(cb){
+            console.log(cb);
+            
+            let res=[]
+            for(var i=0;i<this.lenghth;i++){
+              var data=  cb(this[i],i,this)
+              res.push(data)
+            }return res
+        }
+        let arr=[1,2,3]
+         let val=arr.myMap((a,b,c)=>{
+            return a
+        })
+        console.log(val);
+        
+    </script>
+</body>
+</html>
