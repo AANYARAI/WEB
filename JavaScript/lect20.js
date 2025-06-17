@@ -27,13 +27,9 @@
         // console.log(a.getAttribute('href'));
         // a.setAttribute("href" , "http://amazon.com")
         
-        
-
-
-
-                const h1= document.createElement('h1')
-                const div = document.querySelector('div')
-                h1.innerText="AANYA"
-                div.append(h1)
-                console.log(div);
+        const h1= document.createElement('h1')
+        const div = document.querySelector('div')
+        h1.innerText="AANYA"
+        div.append(h1)
+        console.log(div);
                 
