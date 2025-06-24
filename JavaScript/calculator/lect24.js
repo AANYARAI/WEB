@@ -1,4 +1,4 @@
-let buttons = document.querySelectorAll("button"); // fixed
+let buttons = document.querySelectorAll("button"); // fixedMore actions
 let inp = document.querySelector("input"); // fixed
 
 console.log(buttons, 'hehehe');
