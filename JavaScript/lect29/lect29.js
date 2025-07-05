@@ -23,7 +23,22 @@
 // }
 
 
-let city="delhi"
+
+
+
+
+
+
+
+
+
+let inp = document.querySelector('input')
+let button = document.querySelector('button')
+
+
+
+button.addEventListener("click",()=>{
+let city=inp.value
 let key="9f6290d6cda9a36a63755fadee71f83d"
 let apiData=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`
 
@@ -33,6 +48,13 @@ fetch(apiData).then((res)=>{
 
 }).then((data)=>{
     console.log(data);
-    
-
+    show(data)
 })
+})
+
+let div = document.querySelector('div')
+function show(data){
+let h2 = document.createElement('h2')
+h2.innerText=data.main.temp
+div.append(h2)
+}

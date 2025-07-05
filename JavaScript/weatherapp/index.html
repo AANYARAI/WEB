@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Divine Weather</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.5s ease;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 30px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+      max-width: 350px;
+      width: 90%;
+      z-index: 2;
+    }
+
+    input {
+      padding: 12px 18px;
+      width: 100%;
+      max-width: 250px;
+      border-radius: 25px;
+      border: none;
+      font-size: 16px;
+      margin-bottom: 10px;
+      outline: none;
+      color: #333;
+    }
+
+    button {
+      padding: 10px 20px;
+      border-radius: 25px;
+      border: none;
+      background: #ffffff;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-bottom: 20px;
+    }
+
+    button:hover {
+      background: #f1f1f1;
+    }
+
+    .weather-info h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .weather-info p {
+      font-size: 18px;
+      margin-top: 5px;
+    }
+
+    #icon {
+      font-size: 30px;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    /* Animated backgrounds */
+    .clear {
+      background: linear-gradient(-45deg, #fceabb, #f8b500, #fceabb, #f8b500);
+      background-size: 400% 400%;
+      animation: animate 8s ease infinite;
+    }
+
+    .clouds {
+      background: linear-gradient(-45deg, #bdc3c7, #2c3e50, #bdc3c7, #2c3e50);
+      background-size: 400% 400%;
+      animation: animate 10s ease infinite;
+    }
+
+    .rain {
+      background: linear-gradient(-45deg, #74ebd5, #ACB6E5, #74ebd5, #ACB6E5);
+      background-size: 400% 400%;
+      animation: animate 10s ease infinite;
+    }
+
+    .snow {
+      background: linear-gradient(-45deg, #e0eafc, #cfdef3, #e0eafc, #cfdef3);
+      background-size: 400% 400%;
+      animation: animate 10s ease infinite;
+    }
+
+    .mist {
+      background: linear-gradient(-45deg, #757f9a, #d7dde8, #757f9a, #d7dde8);
+      background-size: 400% 400%;
+      animation: animate 12s ease infinite;
+    }
+
+    .default-bg {
+      background: linear-gradient(-45deg, #667db6, #0082c8, #667db6, #0082c8);
+      background-size: 400% 400%;
+      animation: animate 8s ease infinite;
+    }
+    @keyframes animate {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body class="default-bg">
+  <div class="card">
+    <input type="text" id="cityInput" placeholder="Enter city name" />
+    <button onclick="getWeather()">Check Weather</button>
+    <div class="weather-info">
+      <h2 id="temp">--°C</h2>
+      <p id="condition">
+        <span id="icon">🌈</span>
+        <span id="text">Condition</span>
+      </p>
+      <p id="location">Location</p>
+    </div>
+  </div>
+
+  <script>
+    async function getWeather() {
+      const city = document.getElementById("cityInput").value;
+      const apiKey = "9f6290d6cda9a36a63755fadee71f83d"; // Replace this with your OpenWeatherMap API key
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        if (data.cod === 200) {
+          const temp = data.main.temp;
+          const condition = data.weather[0].main;
+          const cityName = data.name;
+          const conditionText = condition.toLowerCase();
+          const iconEl = document.getElementById("icon");
+          let emoji = "🌈";
+
+          if (conditionText.includes("clear")) emoji = "☀️";
+          else if (conditionText.includes("cloud")) emoji = "☁️";
+          else if (conditionText.includes("rain")) emoji = "🌧️";
+          else if (conditionText.includes("snow")) emoji = "❄️";
+          else if (conditionText.includes("mist") || conditionText.includes("haze")) emoji = "🌫️";
+          else if (conditionText.includes("thunder")) emoji = "⛈️";
+
+          iconEl.innerText = emoji;
+          document.getElementById("temp").innerText = `${Math.round(temp)}°C`;
+          document.getElementById("text").innerText = condition;
+          document.getElementById("location").innerText = cityName;
+
+          // Change background class
+          const body = document.body;
+          body.className = "default-bg";
+
+          if (conditionText.includes("snow")) body.className = "clouds";
+          else if (conditionText.includes("rain")) body.className = "rain";
+          else if (conditionText.includes("clear")) body.className = "clear";
+          else if (conditionText.includes("snow")) body.className = "snow";
+          else if (conditionText.includes("mist") || conditionText.includes("haze")) body.className = "mist";
+          else body.className = "default-bg";
+        } else {
+          alert("City not found.");
+        }
+      } catch (error) {
+        alert("Error fetching weather data.");
+        console.error(error);
+      }
+    }
+  </script>
+</body>
+</html>
