@@ -1,0 +1,34 @@
+*{
+    /* background-color: red; */
+    }
+    #card{
+        margin-top: 100px;
+        height: 250px;
+        width: 200px;
+        cursor: pointer;
+    
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    img{
+        height: 100%;
+        width: 100%;
+    }
+    #parent_Card{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+       
+    }
+    #cardData{
+        display: inline-block;
+        margin-left: 100px;
+        margin-top: 100px;
+        height: 250px;
+        width: 200px;
+        cursor: pointer;
+    
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    

@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongodb": "^6.20.0",
+    "mongoose": "^8.18.1"
+  },
+  "name": "webdevelopment",
+  "version": "1.0.0",
+  "main": "playground-1.mongodb.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AANYARAI/WEB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AANYARAI/WEB/issues"
+  },
+  "homepage": "https://github.com/AANYARAI/WEB#readme",
+  "description": ""
+}

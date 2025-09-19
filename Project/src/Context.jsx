@@ -1,16 +1,97 @@
 
-import { createContext, useReducer, useEffect } from 'react'
+import { createContext, useReducer, useEffect, useState, useContext, useCallback, useMemo } from 'react'
  export const Context= createContext()
+
  const initialData={
-    data:[]
+    data:[],
+    cartData:[]
  }
+
  function reduser(state,action){
     if(action.type=="FETCH_DATA"){
         return{
             ...state,data:action.payload
         }
+    }
+    else if(action.type==="addToCart"){
+         
+        let existingItem=    state.cartData.find(item=>item.id==action.payload)
+
+        if(existingItem){
+            return{
+                ...state,
+                cartData:state.cartData.map(item=>item.id===action.payload.id?{...item,quantity:item.quantity+1}:item)
+            }
+
+        }
+        else{
+            return{
+                ...state,
+                cartData:[...state.cartData,{...action.payload,quantity:1}]
+            }
+        }
+        // {
+        //     cartData{
+        //         id:1,
+        //         title:"hehe",
+        //         iamge:"hehehe",
+        //         quantity:1
+        //     }
+        // }
+
+        // return{
+        //     ...state,
+        //     cartData:[...state.cartData,action.payload]
+
+        // }
+    }
+
+    else if(action.type==="increment"){
+        return{
+            ...state,
+            cartData:state.cartData.map(item=>item.id===action.payload?{...item,quantity:item.quantity+1}:item)
+        }
 
     }
+
+    else if(action.type==="decrement"){
+        return{
+            ...state,
+            cartData:state.cartData.map(item=>item.id===action.payload?{...item,quantity:item.quantity-1}:item).filter(a=>a.quantity>0)
+        }
+    }
+
+
+
+
+
+    else if(action.type=="delet"){
+        return{
+            ...state,
+            cartData:state.cartData.filter((data,key)=>{
+                return key!==action.payload
+
+            })
+        }
+    }
+
+
+    else if(action.type=="max"){
+        return{
+            ...state,
+            data:[...state.data.sort((a,b)=>b.rating-a.rating)]
+        }
+    }
+    else if(action.type=="min"){
+        return{
+            ...state,
+            data:[...state.data.sort((a,b)=>a.rating-b.rating)]
+        }
+    }
+    else{
+        return state
+    }
+
 
  }
 
@@ -26,7 +107,6 @@ import { createContext, useReducer, useEffect } from 'react'
         }).then((data)=>{ 
             dispatch({type:"FETCH_DATA" ,payload:data.recipes})   
         })
-        
     },[])
 
     return(
@@ -39,3 +119,10 @@ import { createContext, useReducer, useEffect } from 'react'
 
 
  export default ContextP
+
+
+
+//  useEffect,useState ,useReducer,react-router-dom,props,useContext
+
+// useRef , useCallback,useMemo,
+
